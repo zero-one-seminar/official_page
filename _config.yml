@@ -113,6 +113,6 @@ theme: dawn
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/nac-39/nuinfo-seminar.git
+  repo: git@github.com:nac-39/nuinfo-seminar.git
   branch: main
 
