@@ -402,9 +402,9 @@ function inputChange() {
     if (val !== '') {
         $('#default-panel .icon-search').addClass('active')
         if (val === 'in:') {
-            $('#no-item-tips').show().html('正在进行全局关键字搜索，请输入关键字');
+            $('#no-item-tips').show().html('全文検索です．キーワードを入力してください．');
         } else if (!val.startsWith('in:') && $(".nav-right nav a:visible").length === 0) {
-            $('#no-item-tips').show().html('未在 <span>' + activeTitle + '</span> 分类中找到'+ searchType + containType + ' <span>' + val.replace(/^[@|#]/g,'') + '</span> 的文章');
+            $('#no-item-tips').show().html('<span>' + activeTitle + '</span> カテゴリーには'+ searchType + containType + ' <span>' + val.replace(/^[@|#]/g,'') + '</span> はありません．');
         }
     } else {
         $('#default-panel .icon-search').removeClass('active')
