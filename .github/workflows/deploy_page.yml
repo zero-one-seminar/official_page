@@ -1,39 +1,39 @@
-name: Hexo generate and deploy to GitHub Pages
+# name: Hexo generate and deploy to GitHub Pages
 
-on:
-  push:
-    branches: [ main ] # mainブランチにデプロイされたされたら起動
-    # https://docs.github.com/ja/actions/reference/events-that-trigger-workflows
+# on:
+#   push:
+#     branches: [ main ] # mainブランチにデプロイされたされたら起動
+#     # https://docs.github.com/ja/actions/reference/events-that-trigger-workflows
 
-jobs:
-  build:
+# jobs:
+#   build:
 
-    runs-on: ubuntu-latest
+#     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [16.x] # LTSが14.17.5だったので14を指定しておく
+#     strategy:
+#       matrix:
+#         node-version: [16.x] # LTSが14.17.5だったので14を指定しておく
 
-    steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }} # node使う
-      uses: actions/setup-node@v2
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci # 初期設定 (packages.jsonに記載のライブラリをインストール)
-                  # hexoのインストールとかはpackage.jsonに記載されている想定
+#     steps:
+#     - uses: actions/checkout@v2
+#     - name: Use Node.js ${{ matrix.node-version }} # node使う
+#       uses: actions/setup-node@v2
+#       with:
+#         node-version: ${{ matrix.node-version }}
+#         cache: 'npm'
+#     - run: npm ci # 初期設定 (packages.jsonに記載のライブラリをインストール)
+#                   # hexoのインストールとかはpackage.jsonに記載されている想定
 
-    - name: Configuration environment # デプロイ用のクレデンシャル情報設定
-      env:
-        HEXO_DEPLOY_PRI: ${{secrets.HEXO_DEPLOY_PRI}}
-      run: |
-        mkdir -p ~/.ssh/
-        echo "$HEXO_DEPLOY_PRI" > ~/.ssh/id_rsa
-        chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan github.com >> ~/.ssh/known_hosts
-        git config --global user.name "nac-39"
-        git config --global user.email "83295760+nac-39@users.noreply.github.com"
-    - name: Deploy hexo # 生成&デプロイ
-      run: |
-        npx hexo clean && npx hexo generate -deploy
+#     - name: Configuration environment # デプロイ用のクレデンシャル情報設定
+#       env:
+#         HEXO_DEPLOY_PRI: ${{secrets.HEXO_DEPLOY_PRI}}
+#       run: |
+#         mkdir -p ~/.ssh/
+#         echo "$HEXO_DEPLOY_PRI" > ~/.ssh/id_rsa
+#         chmod 600 ~/.ssh/id_rsa
+#         ssh-keyscan github.com >> ~/.ssh/known_hosts
+#         git config --global user.name "nac-39"
+#         git config --global user.email "83295760+nac-39@users.noreply.github.com"
+#     - name: Deploy hexo # 生成&デプロイ
+#       run: |
+#         npx hexo clean && npx hexo generate -deploy

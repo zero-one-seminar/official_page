@@ -111,8 +111,8 @@ theme: 3-hexo
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-  type: git
-  repo: git@github.com:nac-39/nuinfo-seminar.git
-  branch: main
+# deploy:
+#   type: git
+#   repo: git@github.com:nac-39/nuinfo-seminar.git
+#   branch: main
 
