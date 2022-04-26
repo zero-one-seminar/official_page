@@ -1,7 +1,6 @@
 ---
 title: 名大情報学部ゼミについて  
-description: ゼミの紹介   
-layout: menu-about  
+description: ゼミの紹介
 comments: false  
 sidebar: custom  
 ---

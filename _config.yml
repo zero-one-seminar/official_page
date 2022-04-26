@@ -15,7 +15,7 @@ timezone: 'Asia/Tokyo'
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: http://nac-39.github.io/nuinfo-seminar
-root: /nuinfo-seminar/
+root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -107,7 +107,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: dawn
+theme: 3-hexo
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
