@@ -1,5 +1,5 @@
 ---
-title: 名大情報学部ゼミについて  
+title: ゼロイチゼミについて  
 description: ゼミの紹介
 comments: false  
 sidebar: custom  

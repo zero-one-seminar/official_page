@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: nuinfo-seminar
+title: nu-zero-one
 subtitle: '名古屋大学情報系自主ゼミ'
 description: ''
 keywords:
@@ -14,7 +14,7 @@ timezone: 'Asia/Tokyo'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://nuinfo-seminar.netlify.app
+url: https://nu-zero-one.netlify.app
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
