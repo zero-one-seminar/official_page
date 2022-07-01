@@ -38,3 +38,19 @@ $$
 $$
 
 $\exists$ さんの勝利！（式は真）
+
+## コードの表示
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+def f(x):
+    return np.sin(x)
+
+x = np.arange(-3, 3, 0.01)
+y = f(x)
+
+plt.plot(x, y)
+plt.show()
+```
