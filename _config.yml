@@ -116,3 +116,11 @@ theme: 3-hexo
 #   repo: git@github.com:nac-39/nuinfo-seminar.git
 #   branch: main
 
+# mathJax
+mathjax:
+  tags: none  # または'ams'または'all'
+  single_dollars: true  # インラインを$記号で宣言するか
+  cjk_width: 0.9  # アジア圏で使われるCJKの相対字幅
+  normal_width: 0.6  # 通常の相対字幅
+  append_css: true  # CSSを各ページに入れるか
+  every_page: true  # フロントマターで設定することなしに任意のページでmathjaxのレンダリングを行うか
