@@ -28,8 +28,8 @@
         <% } %>
     </div>
     <div class="article-meta">
-        <% if (post.date){ %>
-            <%= __('post.created_at') %> : <time class="date" title='<%= __('post.updated_at') %>: <%= date(post.updated, 'YYYY-MM-DD HH:mm:ss')%>'><%= date(post.date, 'YYYY-MM-DD HH:mm') %></time>
+        <% if (post.created_at){ %>
+            <%= __('post.created_at_text') %> : <time class="date" title='<%= __('post.updated_at') %>: <%= date(post.updated_at, 'YYYY-MM-DD HH:mm:ss')%>'><%= date(post.created_at, 'YYYY-MM-DD HH:mm') %></time>
         <% } %>
     </div>
     <div class="article-meta">
