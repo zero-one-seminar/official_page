@@ -1,6 +1,7 @@
 ---
-title: 第一回Python勉強会
-date: 2022-04-19 22:23:53
+title: 1-Python勉強会
+created_at: 2022-04-19 22:23:53
+updated_at: 2022-04-19 22:23:53
 tags:
   - 機械学習
   - Python
