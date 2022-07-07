@@ -1,6 +1,7 @@
 ---
 title: 数式表示のテスト
 date: 2022-07-01 21:44:00
+mathjax: true
 ---
 
 $$
@@ -54,3 +55,17 @@ y = f(x)
 plt.plot(x, y)
 plt.show()
 ```
+
+## mermaid
+### 平衡二分探索木
+
+<div class="mermaid">
+graph TD
+    root --> a
+    a((12)) --> b((6))
+    a --> c((20))
+    b --> d((4))
+    b --> e((8))
+    c --> f((18))
+    c --> g((25))
+</div>
