@@ -11,9 +11,9 @@ hexo generate
 ```
 - Serve
 ```bash
-yarn serve
+yarn server
 or
-hexo serve
+hexo server
 ```
 
 ## Deploy
