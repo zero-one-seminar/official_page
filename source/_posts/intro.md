@@ -5,7 +5,7 @@ updated_at: 2022-04-10 01:29:35
 tags: 
     - 機械学習
     - Python
-category: 1-機械学習
+category: 22-Spring-機械学習
 ---
 
 ゼミで最初に扱うテーマが決まりました．テーマは「機械学習」です！

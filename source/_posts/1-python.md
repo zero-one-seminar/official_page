@@ -5,7 +5,7 @@ updated_at: 2022-04-19 22:23:53
 tags:
   - 機械学習
   - Python
-category: 1-機械学習
+category: 2022-Spring-機械学習
 ---
 
 第一回ゼミを行いました！今回はPythonの基本について学びました．
