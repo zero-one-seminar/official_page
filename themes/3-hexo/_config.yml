@@ -60,7 +60,7 @@ shortcutKey: true
 menu:
   about:  # 'About'ボタン
     on: true # 表示しますか？
-    url: /about  # 跳转链接
+    url: /  # 跳转链接
     type: 1 # ジャンプの種類 1: サイト内の非同期ジャンプ 2: 現在のページにジャンプ 3: 新しいタブページを開く
   friend: # '友達'ボタン
     on: false # 是否展示
