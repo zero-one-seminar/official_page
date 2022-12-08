@@ -34,7 +34,7 @@
             <a  class="dashang" onclick="dashangToggle()">赏</a>
         </p>
         <%}%>
-        <%- partial('_partial/comment', {post: {comments: true}, index: false})%>
+        <%- partial('_partial/comment', {post: true, index: false})%>
     </div>
     <div class="copyright">
         <%- fragment_cache('copyright', function(){
