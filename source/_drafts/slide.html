@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html xmlns="http:/www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>source/images/slide/slide</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="generator" content="pdftohtml 0.36"/>
+<meta name="date" content="2022-12-08T09:13:22+00:00"/>
+<style type="text/css">
+<!--
+.xflip {
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: fliph;
+}
+.yflip {
+    -moz-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    transform: scaleY(-1);
+    filter: flipv;
+}
+.xyflip {
+    -moz-transform: scaleX(-1) scaleY(-1);
+    -webkit-transform: scaleX(-1) scaleY(-1);
+    -o-transform: scaleX(-1) scaleY(-1);
+    transform: scaleX(-1) scaleY(-1);
+    filter: fliph + flipv;
+}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<!-- Page 1 -->
+<a name="1"></a>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:90px;font-family:AAAAAC+Meiryo;color:#ffffff;}
+	.ft01{font-size:36px;font-family:AAAAAE+Meiryo;color:#ffffff;}
+	.ft02{font-size:18px;font-family:AAAAAG+YuGothic;color:#ffffff;}
+-->
+</style>
+<div id="page1-div" style="position:relative;width:1440px;height:810px;">
+<img width="1440" height="810" src="/images/slide/slide001.png" alt="background image"/>
+<p style="position:absolute;top:185px;left:360px;white-space:nowrap" class="ft00">機械学習の流れと</p>
+<p style="position:absolute;top:282px;left:540px;white-space:nowrap" class="ft00">損失関数</p>
+<p style="position:absolute;top:420px;left:517px;white-space:nowrap" class="ft01">12/8&#160;深層学習ゼミ第5回</p>
+<p style="position:absolute;top:775px;left:1419px;white-space:nowrap" class="ft02">1</p>
+</div>
+<!-- Page 2 -->
+<a name="2"></a>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft03{font-size:60px;font-family:AAAAAI+Meiryo;color:#ffffff;}
+	.ft04{font-size:36px;font-family:AAAAAK+Meiryo;color:#333333;}
+	.ft05{font-size:36px;font-family:AAAAAM+Wingdings;color:#333333;}
+	.ft06{font-size:36px;font-family:AAAAAE+Meiryo;color:#333333;}
+	.ft07{font-size:36px;font-family:AAAAAO+Calibri;color:#333333;}
+	.ft08{font-size:36px;font-family:AAAAAK+Meiryo;color:#c00000;}
+	.ft09{font-size:18px;font-family:AAAAAQ+Calibri;color:#ffffff;}
+	.ft010{font-size:18px;font-family:AAAAAS+Meiryo;color:#ffffff;}
+	.ft011{font-size:20px;font-family:AAAAAU+Meiryo;color:#000000;}
+	.ft012{font-size:20px;font-family:AAAAAW+Calibri;color:#000000;}
+	.ft013{font-size:20px;font-family:AAAAAW+Calibri;color:#0563c1;}
+-->
+</style>
+<div id="page2-div" style="position:relative;width:1440px;height:810px;">
+<img width="1440" height="810" src="/images/slide/slide002.png" alt="background image"/>
+<p style="position:absolute;top:44px;left:72px;white-space:nowrap" class="ft03">機械学習とは</p>
+<p style="position:absolute;top:206px;left:110px;white-space:nowrap" class="ft04"><b>機械学習とは</b></p>
+<p style="position:absolute;top:270px;left:110px;white-space:nowrap" class="ft05">p</p>
+<p style="position:absolute;top:265px;left:150px;white-space:nowrap" class="ft06">『データから、「機械」（コンピューター）が⾃動で「学習」し、デー</p>
+<p style="position:absolute;top:305px;left:150px;white-space:nowrap" class="ft06">タの背景にあるルールやパターンを発⾒する⽅法』</p>
+<p style="position:absolute;top:473px;left:110px;white-space:nowrap" class="ft05">p</p>
+<p style="position:absolute;top:467px;left:150px;white-space:nowrap" class="ft06">データから学習する</p>
+<p style="position:absolute;top:471px;left:474px;white-space:nowrap" class="ft07">→&#160;</p>
+<p style="position:absolute;top:467px;left:515px;white-space:nowrap" class="ft04"><b>データ駆動型学習</b></p>
+<p style="position:absolute;top:546px;left:110px;white-space:nowrap" class="ft05">p</p>
+<p style="position:absolute;top:541px;left:150px;white-space:nowrap" class="ft06">学習する⽅法やももともとの問題設定にも種類がある</p>
+<p style="position:absolute;top:624px;left:146px;white-space:nowrap" class="ft07">→</p>
+<p style="position:absolute;top:620px;left:178px;white-space:nowrap" class="ft08"><b>教師あり学習、教師なし学習、強化学習など</b></p>
+<p style="position:absolute;top:775px;left:1420px;white-space:nowrap" class="ft09">2</p>
+<p style="position:absolute;top:774px;left:1327px;white-space:nowrap" class="ft010">01semi</p>
+<p style="position:absolute;top:344px;left:131px;white-space:nowrap" class="ft011">引⽤</p>
+<p style="position:absolute;top:346px;left:173px;white-space:nowrap" class="ft012">:</p>
+<p style="position:absolute;top:344px;left:183px;white-space:nowrap" class="ft011">野村総合研究所「機械学習</p>
+<p style="position:absolute;top:346px;left:456px;white-space:nowrap" class="ft012">Machine&#160;Learning</p>
+<p style="position:absolute;top:344px;left:609px;white-space:nowrap" class="ft011">」</p>
+<p style="position:absolute;top:346px;left:630px;white-space:nowrap" class="ft013"><a href="https:/www.nri.com/jp/knowledge/glossary/lst/ka/machine_learning">https:/www.nri.com/jp/knowledge/glossary/lst/ka/machine_learning</a></p>
+</div>
+<!-- Page 3 -->
+<a name="3"></a>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft014{font-size:51px;font-family:AAAAAY+Meiryo;color:#1d5c6d;}
+	.ft015{font-size:51px;font-family:AAAAAY+Meiryo;color:#c00000;}
+	.ft016{font-size:34px;font-family:AAAABA+Wingdings;color:#000000;}
+	.ft017{font-size:34px;font-family:AAAABC+Meiryo;color:#000000;}
+	.ft018{font-size:34px;font-family:AAAABE+Meiryo;color:#000000;}
+	.ft019{font-size:36px;font-family:AAAAAM+Wingdings;color:#212121;}
+	.ft020{font-size:36px;font-family:AAAAAK+Meiryo;color:#212121;}
+	.ft021{font-size:36px;font-family:AAAAAE+Meiryo;color:#212121;}
+	.ft022{font-size:34px;line-height:63px;font-family:AAAABE+Meiryo;color:#000000;}
+-->
+</style>
+<div id="page3-div" style="position:relative;width:1440px;height:810px;">
+<img width="1440" height="810" src="/images/slide/slide003.png" alt="background image"/>
+<p style="position:absolute;top:775px;left:1420px;white-space:nowrap" class="ft09">3</p>
+<p style="position:absolute;top:774px;left:1327px;white-space:nowrap" class="ft010">01semi</p>
+<p style="position:absolute;top:49px;left:57px;white-space:nowrap" class="ft014"><b>教師</b></p>
+<p style="position:absolute;top:49px;left:159px;white-space:nowrap" class="ft015"><b>あり</b></p>
+<p style="position:absolute;top:49px;left:261px;white-space:nowrap" class="ft014"><b>学習</b></p>
+<p style="position:absolute;top:175px;left:57px;white-space:nowrap" class="ft016">p</p>
+<p style="position:absolute;top:170px;left:111px;white-space:nowrap" class="ft017"><b>⼊出⼒がペアになった</b></p>
+<p style="position:absolute;top:211px;left:111px;white-space:nowrap" class="ft017"><b>データから、⼊出⼒の</b></p>
+<p style="position:absolute;top:252px;left:111px;white-space:nowrap" class="ft017"><b>関係を学習</b></p>
+<p style="position:absolute;top:295px;left:111px;white-space:nowrap" class="ft017"><b>（回帰・分類）</b></p>
+<p style="position:absolute;top:399px;left:57px;white-space:nowrap" class="ft016">p</p>
+<p style="position:absolute;top:394px;left:111px;white-space:nowrap" class="ft018">回帰や分類の問題</p>
+<p style="position:absolute;top:460px;left:111px;white-space:nowrap" class="ft016">p</p>
+<p style="position:absolute;top:455px;left:165px;white-space:nowrap" class="ft018">回帰分析</p>
+<p style="position:absolute;top:522px;left:111px;white-space:nowrap" class="ft016">p</p>
+<p style="position:absolute;top:517px;left:165px;white-space:nowrap" class="ft018">判別分析</p>
+<p style="position:absolute;top:583px;left:111px;white-space:nowrap" class="ft016">p</p>
+<p style="position:absolute;top:578px;left:165px;white-space:nowrap" class="ft022">ニューラルネット<br/>ワーク</p>
+<p style="position:absolute;top:49px;left:519px;white-space:nowrap" class="ft014"><b>教師なし学習</b></p>
+<p style="position:absolute;top:175px;left:519px;white-space:nowrap" class="ft016">p</p>
+<p style="position:absolute;top:170px;left:573px;white-space:nowrap" class="ft017"><b>⼊⼒だけのがデータか</b></p>
+<p style="position:absolute;top:211px;left:573px;white-space:nowrap" class="ft017"><b>ら、本質的な構造を取</b></p>
+<p style="position:absolute;top:252px;left:573px;white-space:nowrap" class="ft017"><b>り出して抽出</b></p>
+<p style="position:absolute;top:399px;left:519px;white-space:nowrap" class="ft016">p</p>
+<p style="position:absolute;top:394px;left:573px;white-space:nowrap" class="ft018">特徴・構造を抽出</p>
+<p style="position:absolute;top:460px;left:573px;white-space:nowrap" class="ft016">p</p>
+<p style="position:absolute;top:455px;left:627px;white-space:nowrap" class="ft018">主成分分析</p>
+<p style="position:absolute;top:522px;left:573px;white-space:nowrap" class="ft016">p</p>
+<p style="position:absolute;top:517px;left:627px;white-space:nowrap" class="ft018">クラスタリング</p>
+<p style="position:absolute;top:585px;left:573px;white-space:nowrap" class="ft016">p</p>
+<p style="position:absolute;top:580px;left:627px;white-space:nowrap" class="ft018">決定⽊</p>
+<p style="position:absolute;top:49px;left:981px;white-space:nowrap" class="ft015"><b>強化学習</b></p>
+<p style="position:absolute;top:175px;left:981px;white-space:nowrap" class="ft019">p</p>
+<p style="position:absolute;top:170px;left:1035px;white-space:nowrap" class="ft020"><b>試⾏錯誤と与えられ</b></p>
+<p style="position:absolute;top:212px;left:1035px;white-space:nowrap" class="ft020"><b>た報酬から、⾏動の</b></p>
+<p style="position:absolute;top:256px;left:1035px;white-space:nowrap" class="ft020"><b>選択を学習</b></p>
+<p style="position:absolute;top:406px;left:1035px;white-space:nowrap" class="ft019">p</p>
+<p style="position:absolute;top:401px;left:1089px;white-space:nowrap" class="ft021">囲碁や将棋</p>
+<p style="position:absolute;top:472px;left:1035px;white-space:nowrap" class="ft019">p</p>
+<p style="position:absolute;top:467px;left:1089px;white-space:nowrap" class="ft021">チェス</p>
+<p style="position:absolute;top:537px;left:1035px;white-space:nowrap" class="ft019">p</p>
+<p style="position:absolute;top:531px;left:1089px;white-space:nowrap" class="ft021">⾃動運転</p>
+</div>
+<!-- Page 4 -->
+<a name="4"></a>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft023{font-size:36px;font-family:AAAAAK+Meiryo;color:#000000;}
+	.ft024{font-size:36px;font-family:AAAAAM+Wingdings;color:#000000;}
+	.ft025{font-size:36px;font-family:AAAAAE+Meiryo;color:#000000;}
+	.ft026{font-size:36px;font-family:AAAAAO+Calibri;color:#000000;}
+	.ft027{font-size:36px;font-family:AAAAAK+Meiryo;color:#277a92;}
+	.ft028{font-size:36px;font-family:AAAABG+Calibri;color:#277a92;}
+	.ft029{font-size:36px;font-family:AAAABG+Calibri;color:#000000;}
+	.ft030{font-size:23px;font-family:AAAABI+Meiryo;color:#000000;}
+-->
+</style>
+<div id="page4-div" style="position:relative;width:1440px;height:810px;">
+<img width="1440" height="810" src="/images/slide/slide004.png" alt="background image"/>
+<p style="position:absolute;top:44px;left:72px;white-space:nowrap" class="ft03">深層学習の位置付け</p>
+<p style="position:absolute;top:206px;left:110px;white-space:nowrap" class="ft023"><b>深層学習の位置付け</b></p>
+<p style="position:absolute;top:272px;left:110px;white-space:nowrap" class="ft024">p</p>
+<p style="position:absolute;top:266px;left:150px;white-space:nowrap" class="ft025">教師あり学習</p>
+<p style="position:absolute;top:338px;left:191px;white-space:nowrap" class="ft024">p</p>
+<p style="position:absolute;top:332px;left:231px;white-space:nowrap" class="ft025">多層ニューラルネットワーク</p>
+<p style="position:absolute;top:408px;left:227px;white-space:nowrap" class="ft026">→</p>
+<p style="position:absolute;top:404px;left:259px;white-space:nowrap" class="ft027"><b>ディープラーニング</b></p>
+<p style="position:absolute;top:408px;left:583px;white-space:nowrap" class="ft028"><b>(</b></p>
+<p style="position:absolute;top:404px;left:595px;white-space:nowrap" class="ft027"><b>深層学習</b></p>
+<p style="position:absolute;top:408px;left:739px;white-space:nowrap" class="ft028"><b>)</b></p>
+<p style="position:absolute;top:484px;left:110px;white-space:nowrap" class="ft023"><b>特に</b></p>
+<p style="position:absolute;top:487px;left:182px;white-space:nowrap" class="ft029"><b>…</b></p>
+<p style="position:absolute;top:563px;left:146px;white-space:nowrap" class="ft025">関数を⾼精度で推定できるため、様々な問題で使われている</p>
+<p style="position:absolute;top:775px;left:1420px;white-space:nowrap" class="ft09">4</p>
+<p style="position:absolute;top:774px;left:1327px;white-space:nowrap" class="ft010">01semi</p>
+<p style="position:absolute;top:514px;left:1152px;white-space:nowrap" class="ft030">第⼀回などを参照</p>
+</div>
+<!-- Page 5 -->
+<a name="5"></a>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</style>
+<div id="page5-div" style="position:relative;width:1440px;height:810px;">
+<img width="1440" height="810" src="/images/slide/slide005.png" alt="background image"/>
+<p style="position:absolute;top:44px;left:72px;white-space:nowrap" class="ft03">教師あり学習の流れ</p>
+<p style="position:absolute;top:775px;left:1420px;white-space:nowrap" class="ft09">5</p>
+<p style="position:absolute;top:774px;left:1327px;white-space:nowrap" class="ft010">01semi</p>
+</div>
+<!-- Page 6 -->
+<a name="6"></a>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</style>
+<div id="page6-div" style="position:relative;width:1440px;height:810px;">
+<img width="1440" height="810" src="/images/slide/slide006.png" alt="background image"/>
+<p style="position:absolute;top:44px;left:72px;white-space:nowrap" class="ft03">教師あり学習の流れ</p>
+<p style="position:absolute;top:775px;left:1420px;white-space:nowrap" class="ft09">6</p>
+<p style="position:absolute;top:774px;left:1327px;white-space:nowrap" class="ft010">01semi</p>
+</div>
+<!-- Page 7 -->
+<a name="7"></a>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft031{font-size:36px;font-family:AAAAAE+Meiryo;color:#277a92;}
+	.ft032{font-size:38px;font-family:AAAABK+Meiryo;color:#c55a11;}
+	.ft033{font-size:38px;font-family:AAAABM+Calibri;color:#c55a11;}
+	.ft034{font-size:38px;font-family:AAAABO+Meiryo;color:#c55a11;}
+	.ft035{font-size:38px;font-family:AAAABQ+Calibri;color:#c55a11;}
+-->
+</style>
+<div id="page7-div" style="position:relative;width:1440px;height:810px;">
+<img width="1440" height="810" src="/images/slide/slide007.png" alt="background image"/>
+<p style="position:absolute;top:44px;left:72px;white-space:nowrap" class="ft03">損失関数に基づいた学習</p>
+<p style="position:absolute;top:206px;left:110px;white-space:nowrap" class="ft023"><b>幸せの指標</b></p>
+<p style="position:absolute;top:286px;left:110px;white-space:nowrap" class="ft031">あなたは今、どれだけ幸せですか︖</p>
+<p style="position:absolute;top:775px;left:1420px;white-space:nowrap" class="ft09">7</p>
+<p style="position:absolute;top:774px;left:1327px;white-space:nowrap" class="ft010">01semi</p>
+<p style="position:absolute;top:353px;left:110px;white-space:nowrap" class="ft026">→</p>
+<p style="position:absolute;top:350px;left:142px;white-space:nowrap" class="ft025">幸せ指標</p>
+<p style="position:absolute;top:353px;left:286px;white-space:nowrap" class="ft026">(</p>
+<p style="position:absolute;top:350px;left:297px;white-space:nowrap" class="ft023"><b>理想の状態との差</b></p>
+<p style="position:absolute;top:353px;left:585px;white-space:nowrap" class="ft029"><b>)</b></p>
+<p style="position:absolute;top:350px;left:597px;white-space:nowrap" class="ft025">で判断</p>
+<p style="position:absolute;top:413px;left:110px;white-space:nowrap" class="ft026">→</p>
+<p style="position:absolute;top:410px;left:142px;white-space:nowrap" class="ft025">幸せ指標をもとに“最適な⼈⽣”を探索していく</p>
+<p style="position:absolute;top:500px;left:110px;white-space:nowrap" class="ft032">深層学習でもある指標</p>
+<p style="position:absolute;top:550px;left:110px;white-space:nowrap" class="ft033">(</p>
+<p style="position:absolute;top:546px;left:122px;white-space:nowrap" class="ft034"><b>出⼒データとモデルの出⼒との差</b></p>
+<p style="position:absolute;top:550px;left:707px;white-space:nowrap" class="ft035"><b>)</b></p>
+<p style="position:absolute;top:546px;left:719px;white-space:nowrap" class="ft032">を</p>
+<p style="position:absolute;top:593px;left:110px;white-space:nowrap" class="ft032">⼿がかりに最適な重みパラメータを探索</p>
+</div>
+<!-- Page 8 -->
+<a name="8"></a>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft036{font-size:36px;line-height:58px;font-family:AAAAAE+Meiryo;color:#277a92;}
+-->
+</style>
+<div id="page8-div" style="position:relative;width:1440px;height:810px;">
+<img width="1440" height="810" src="/images/slide/slide008.png" alt="background image"/>
+<p style="position:absolute;top:190px;left:110px;white-space:nowrap" class="ft023"><b>損失関数</b></p>
+<p style="position:absolute;top:248px;left:110px;white-space:nowrap" class="ft036">ニューラルネットワークなどのモデルが<br/>教師データに対してどれだけ適合しているかを表す関数</p>
+<p style="position:absolute;top:775px;left:1420px;white-space:nowrap" class="ft09">8</p>
+<p style="position:absolute;top:774px;left:1327px;white-space:nowrap" class="ft010">01semi</p>
+<p style="position:absolute;top:44px;left:72px;white-space:nowrap" class="ft03">損失関数に基づいた学習</p>
+<p style="position:absolute;top:404px;left:110px;white-space:nowrap" class="ft023"><b>損失関数の代表例</b></p>
+<p style="position:absolute;top:469px;left:110px;white-space:nowrap" class="ft024">ü</p>
+<p style="position:absolute;top:464px;left:150px;white-space:nowrap" class="ft025">⼆乗和誤差関数（回帰問題）</p>
+</div>
+<!-- Page 9 -->
+<a name="9"></a>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</style>
+<div id="page9-div" style="position:relative;width:1440px;height:810px;">
+<img width="1440" height="810" src="/images/slide/slide009.png" alt="background image"/>
+<p style="position:absolute;top:44px;left:72px;white-space:nowrap" class="ft03">損失関数に基づいた学習</p>
+<p style="position:absolute;top:187px;left:110px;white-space:nowrap" class="ft023"><b>損失関数の代表例</b></p>
+<p style="position:absolute;top:266px;left:110px;white-space:nowrap" class="ft024">ü</p>
+<p style="position:absolute;top:260px;left:150px;white-space:nowrap" class="ft025">ゼロイチ誤差関数（分類問題）</p>
+<p style="position:absolute;top:775px;left:1420px;white-space:nowrap" class="ft09">9</p>
+<p style="position:absolute;top:774px;left:1327px;white-space:nowrap" class="ft010">01semi</p>
+</div>
+<!-- Page 10 -->
+<a name="10"></a>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft037{font-size:36px;font-family:AAAAAO+Calibri;color:#277a92;}
+-->
+</style>
+<div id="page10-div" style="position:relative;width:1440px;height:810px;">
+<img width="1440" height="810" src="/images/slide/slide010.png" alt="background image"/>
+<p style="position:absolute;top:190px;left:110px;white-space:nowrap" class="ft023"><b>損失関数に基づいた学習</b></p>
+<p style="position:absolute;top:248px;left:110px;white-space:nowrap" class="ft036">損失関数の値を最⼩化できるように、<br/>重みパラメータの値を設定</p>
+<p style="position:absolute;top:310px;left:578px;white-space:nowrap" class="ft037">→</p>
+<p style="position:absolute;top:307px;left:610px;white-space:nowrap" class="ft027"><b>誤差逆伝播法</b></p>
+<p style="position:absolute;top:775px;left:1411px;white-space:nowrap" class="ft09">10</p>
+<p style="position:absolute;top:774px;left:1327px;white-space:nowrap" class="ft010">01semi</p>
+<p style="position:absolute;top:44px;left:72px;white-space:nowrap" class="ft03">損失関数に基づいた学習</p>
+</div>
+<!-- Page 11 -->
+<a name="11"></a>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</style>
+<div id="page11-div" style="position:relative;width:1440px;height:810px;">
+<img width="1440" height="810" src="/images/slide/slide011.png" alt="background image"/>
+<p style="position:absolute;top:44px;left:72px;white-space:nowrap" class="ft03">教師あり学習の流れ</p>
+<p style="position:absolute;top:775px;left:1411px;white-space:nowrap" class="ft09">11</p>
+<p style="position:absolute;top:774px;left:1327px;white-space:nowrap" class="ft010">01semi</p>
+</div>
+<!-- Page 12 -->
+<a name="12"></a>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</style>
+<div id="page12-div" style="position:relative;width:1440px;height:810px;">
+<img width="1440" height="810" src="/images/slide/slide012.png" alt="background image"/>
+<p style="position:absolute;top:775px;left:1411px;white-space:nowrap" class="ft09">12</p>
+<p style="position:absolute;top:774px;left:1327px;white-space:nowrap" class="ft010">01semi</p>
+<p style="position:absolute;top:44px;left:72px;white-space:nowrap" class="ft03">損失関数に基づいた学習</p>
+<p style="position:absolute;top:187px;left:110px;white-space:nowrap" class="ft023"><b>損失関数の代表例</b></p>
+<p style="position:absolute;top:266px;left:110px;white-space:nowrap" class="ft024">ü</p>
+<p style="position:absolute;top:260px;left:150px;white-space:nowrap" class="ft025">⼆乗和誤差関数</p>
+<p style="position:absolute;top:264px;left:402px;white-space:nowrap" class="ft026">(one-hot</p>
+<p style="position:absolute;top:260px;left:530px;white-space:nowrap" class="ft025">表現</p>
+<p style="position:absolute;top:264px;left:602px;white-space:nowrap" class="ft026">)</p>
+<p style="position:absolute;top:504px;left:110px;white-space:nowrap" class="ft024">ü</p>
+<p style="position:absolute;top:499px;left:150px;white-space:nowrap" class="ft025">交差エントロピー誤差</p>
+</div>
+</body>
+</html>
