@@ -78,6 +78,10 @@ $ docker-compose down
 
 を実行しましょう。
 
+**初心者向け解説終わり**
+
+---
+
 </div></details>
 
 
