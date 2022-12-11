@@ -19,13 +19,13 @@ $ cd <クローン先のパス>/official_page
 でディレクトリに入ります。
 
 ### 3. コンテナを立ち上げる
-```shell
+```
 $ docker-compose up -d
 ```
 で自動的にビルドが始まり、コンテナが立ち上がります。
 （最初は時間がかかるかも）
 
-```shell
+```
 $ docker-compose up -d
 ...
 Creating nuinfo-seminar-app ... done
@@ -36,7 +36,7 @@ Creating nuinfo-seminar-app ... done
 ### 4. コンテナの中に入る
 先ほど立ち上げたコンテナは`alpine-linux`というOSを使っているので、この中に入って作業をします。
 
-```shell
+```
 // ここはローカルのシェル
 $ docker-compose exec app sh
 // ここからalpine-linux
@@ -52,7 +52,7 @@ RUN npm install -g hexo-cli
 ```
 
 バージョンを確認してみましょう。
-```shell
+```
 /app # hexo --version
 hexo: 6.2.0
 hexo-cli: 4.3.0
@@ -64,7 +64,7 @@ hexo-cli: 4.3.0
 ### 6. Docker環境を抜ける
 `Ctrl+D`（macの人は`Control+D`）で抜けられます。ただしこれだけだとDockerのコンテナが立ち上がったままになってしまうので、
 
-```shell
+```
 $ docker-compose stop
 ```
 
@@ -72,7 +72,7 @@ $ docker-compose stop
 
 コンテナ自体を削除したいときは、
 
-```shell
+```
 $ docker-compose down
 ```
 
@@ -86,7 +86,7 @@ $ docker-compose down
 
 
 - コンテナ立ち上げ
-```shell
+```
 $ docker-compose up -d
 ```
 
@@ -98,20 +98,20 @@ $ docker-compose exec app sh
 
 ## Commands
 ### !!最初にやること!!
-```shell
+```
 yarn install
 ```
 を実行して、諸々のパッケージのインストールをしてください。（じゃないと文字化けします）
 
 
 - Build
-```shell
+```
 /app # yarn build
 or
 /app # hexo generate
 ```
 - Serve
-```shell
+```
 /app # yarn server
 or
 /app # hexo server
