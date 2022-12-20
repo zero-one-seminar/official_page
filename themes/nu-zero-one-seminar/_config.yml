@@ -1,0 +1,30 @@
+
+# html lang
+language: ja
+
+menu:
+  - title: ゼロイチゼミについて
+    path: /about
+  - title: ゼミ一覧
+    path: /seminars
+
+
+links:
+  github: https://github.com/zero-one-seminar
+  twitter: https://twitter.com/nu_zero_one
+
+images:
+  avatar: avatar.png
+  icon: 
+    github: icons/github.svg
+    twitter: icons/twitter.svg
+
+# stylesheets loaded in the <head>
+stylesheets:
+- /css/nu-zero-one-seminar.css
+- https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css
+- https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css
+
+# scripts loaded in the end of the body
+scripts:
+- /js/nu-zero-one-seminar.js

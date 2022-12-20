@@ -1,0 +1,18 @@
+<% const articles = page.posts.sort((a,b) => { const sa = String(a.title).replace(/(\d+)/g, m => m.padStart(30, '0')); const sb = String(b.title).replace(/(\d+)/g, m => m.padStart(30, '0')); return sa
+< sb ? -1 : sa > sb ? 1 : 0; }) %>
+<div id="category">
+  <h1 class="title"><%=page.category%></h1>
+  <div class="content">
+    <% articles.each(article => { %>
+    <div class="box">
+      <p class="title is-4">
+        <a href="<%=url_for(article.path)%>"> <%=article.title%> </a>
+      </p>
+      <time datetime="<%=date_xml(article.created_at)%>"> <%=date(article.created_at)%> </time>
+      <p class="content"><%- article.excerpt %></p>
+    </div>
+    <% }); %>
+  </div>
+</div>
+
+<div id="paginator" class="has-text-centered"><%-paginator({ page_class: "tag page-number", current_class: "tag is-link current" })%></div>
