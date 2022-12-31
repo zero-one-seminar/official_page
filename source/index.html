@@ -1,0 +1,55 @@
+---
+layout: index
+---
+
+<div id="home">
+  <div id="top" class="is-align-items-center mb-6">
+    <div class="m-6">
+      <p class="title has-text-white">ゼロイチゼミ</p>
+      <p class="subtitle has-text-white">名大情報学部の学生が中心となって発足した自主ゼミです。</p>
+    </div>
+  </div>
+  <div class="columns mx-4">
+    <div class="column ">
+      <article class="">
+        <p class="title">お知らせ</p>
+        <div>お知らせはありません</div>
+      </article>
+    </div>
+    <div class="column">
+      <article class="">
+        <p class="title">Twitter</p>
+        <a class="twitter-timeline" data-width="350" data-height="500" href="https://twitter.com/nu_zero_one?ref_src=twsrc%5Etfw">Tweets by nu_zero_one</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </article>
+    </div>
+  </div>
+</div>
+
+<style>
+  #home {
+    scroll-behavior: smooth;
+  }
+  #top {
+    display: flex;
+    height: 50vh;
+    animation: image_anime 20s ease infinite;
+    background-blend-mode: darken;
+    background-image: url(/images/top5.jpeg);
+    background-position: center;
+  }
+  @keyframes image_anime {
+    0% {
+      background-image: url(/images/top1.jpeg); /* 背景画像1を指定 */
+    }
+    20% {
+      background-image: url(/images/top2.jpeg); /* 背景画像2を指定 */
+    }
+    40% {
+      background-image: url(/images/top3.jpeg); /* 背景画像1を指定 */
+    }
+    80% {
+      background-image: url(/images/top4.jpeg); /* 背景画像1を指定 */
+    }
+  }
+</style>

@@ -4,13 +4,12 @@
 
 # Site
 title: nu-zero-one
-subtitle: '名古屋大学情報系自主ゼミ'
-description: ''
+subtitle: "名古屋大学情報系自主ゼミ"
+description: ""
 keywords:
-author: 
+author:
 language: ja
-timezone: 'Asia/Tokyo'
-
+timezone: "Asia/Tokyo"
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -39,7 +38,7 @@ titlecase: false # Transform title into titlecase
 external_link:
   enable: true # Open external links in new tab
   field: site # Apply to the whole site
-  exclude: ''
+  exclude: ""
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
@@ -47,25 +46,25 @@ relative_link: false
 future: true
 highlight:
   enable: false
-  line_number: true
+  line_number: false
   auto_detect: false
-  tab_replace: ''
+  tab_replace: ""
   wrap: true
   hljs: false
 prismjs:
   enable: false
   preprocess: true
   line_number: true
-  tab_replace: ''
+  tab_replace: ""
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ''
+  path: ""
   per_page: 10
-  order_by: -date
+  order_by: -created_at
 
 archive_generator:
   enabled: true
@@ -73,8 +72,8 @@ archive_generator:
   yearly: true
   monthly: true
   daily: false
-  order_by: -date
-  
+  order_by: -created_at
+
 # Category & Tag
 default_category: uncategorized
 category_map:
@@ -91,7 +90,7 @@ meta_generator: true
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## updated_option supports 'mtime', 'date', 'empty'
-updated_option: 'mtime'
+updated_option: "mtime"
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -118,9 +117,18 @@ theme: nu-zero-one-seminar
 
 # mathJax
 mathjax:
-  tags: none  # または'ams'または'all'
-  single_dollars: true  # インラインを$記号で宣言するか
-  cjk_width: 0.9  # アジア圏で使われるCJKの相対字幅
-  normal_width: 0.6  # 通常の相対字幅
-  append_css: true  # CSSを各ページに入れるか
-  every_page: true  # フロントマターで設定することなしに任意のページでmathjaxのレンダリングを行うか
+  tags: none # または'ams'または'all'
+  single_dollars: true # インラインを$記号で宣言するか
+  cjk_width: 0.9 # アジア圏で使われるCJKの相対字幅
+  normal_width: 0.6 # 通常の相対字幅
+  append_css: true # CSSを各ページに入れるか
+  every_page: true # フロントマターで設定することなしに任意のページでmathjaxのレンダリングを行うか
+
+# markdownのレンダラーの設定
+# https://github.com/hexojs/hexo-renderer-markdown-it
+markdown:
+  render: 
+    langPrefix: 'language-'
+    html: true
+  plugins:
+    - markdown-it-footnote

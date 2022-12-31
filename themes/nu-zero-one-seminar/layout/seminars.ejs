@@ -1,10 +1,13 @@
-<h1 class="title"><%= page.title %></h1>
+<h1 class="title content"><%= page.title %></h1>
 <div class="cards">
   <% page.seminars.forEach(seminar => { %>
   <div class="card my-2">
     <div class="card-header">
-      <div class="tag"><%- seminar.period %></div>
+      <% if (seminar.category) { %> <h1 class="card-header-title"><a href="/categories/<%- seminar.category %> "><%- seminar.theme %></a></h1>
+      <% } else { %>
       <h1 class="card-header-title"><%- seminar.theme %></h1>
+      <%}%>
+      <div class="tag"><%- seminar.period %></div>
     </div>
     <div class="card-content columns">
       <div class="content column"><%- markdown(seminar.description) %></div>

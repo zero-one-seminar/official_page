@@ -1,0 +1,53 @@
+// @import "../../../../node_modules/bulma/bulma.sass"
+
+@import "./custom-bullma.sass"
+@import "../../../../node_modules/bulma/sass/base/_all.sass"
+@import "../../../../node_modules/bulma/sass/components/_all.sass"
+@import "../../../../node_modules/bulma/sass/elements/_all.sass"
+@import "../../../../node_modules/bulma/sass/form/_all.sass"
+@import "../../../../node_modules/bulma/sass/grid/_all.sass"
+@import "../../../../node_modules/bulma/sass/helpers/_all.sass"
+@import "../../../../node_modules/bulma/sass/layout/_all.sass"
+@import "../../../../node_modules/bulma/sass/utilities/_all.sass"
+
+.layout__wrapper
+  @include desktop
+    display: grid
+    grid-template-columns: 1fr 3fr
+.layout__left
+  @include touch
+    display: none
+  @include desktop
+    height: 100vh
+    position: sticky
+    top: 0
+
+#nav__top
+  @include desktop
+    display: none
+
+.layout__right
+  main
+    @include mobile
+      margin: 16px
+    @include tablet
+      margin: 40px
+    @include desktop
+      margin: 40px
+    min-height: 100vh
+  @include touch
+    margin-top: calc(52px + 16px)
+
+.layout__right__home
+  main
+    min-height: 100vh
+    top: 0px
+
+  @include touch
+    margin-top: calc(52px + 16px)
+
+.h-max
+  height: max-content
+
+.twitter-timeline
+  width: 100%

@@ -1,13 +1,8 @@
-<aside id="nav__left" class="column is-one-quarter has-bg-gray">
-  <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-    <span aria-hidden="true"></span>
-    <span aria-hidden="true"></span>
-    <span aria-hidden="true"></span>
-  </a>
+<aside id="nav__left" class="layout__left has-background-white-bis">
   <div class="columns is-justify-content-center p-4">
-    <figure class="image column">
-      <img src="/images/<%= theme.images.avatar %> " />
-    </figure>
+    <a href="/">
+      <img src="/images/<%= theme.images.avatar %> " alt="logo" width="200px" height="200px" />
+    </a>
   </div>
   <div class="columns is-justify-content-center">
     <% if (theme.links.github) { %>
@@ -22,17 +17,19 @@
     </span>
     <% } %>
   </div>
-  <div class="menu p-2 mt-8">
-    <ul class="menu-list">
-      <% for( const {title: menu_title, path: menu_path} of theme.menu ) { %>
-      <li>
-        <a href="<%- url_for(menu_path)%>"><%= menu_title %> </a>
-      </li>
-      <% } %>
-    </ul>
-  </div>
-  <div class="menu">
-    <p class="menu-label">活動記録</p>
-    <%- list_categories(site.categories, { show_count: false, class: 'menu' }) %>
+  <div class="p-2">
+    <div class="menu">
+      <ul class="menu-list">
+        <% for( const {title: menu_title, path: menu_path} of theme.menu ) { %>
+        <li>
+          <a href="<%- url_for(menu_path)%>"><%= menu_title %> </a>
+        </li>
+        <% } %>
+      </ul>
+      <p class="menu-label">活動記録</p>
+      <%- list_categories(site.categories, { show_count: false, class: 'menu' }) %>
+    </div>
+    <p class="menu-label">タグ</p>
+    <div><%- list_tags(site.tags, { class: { ul: 'field is-grouped is-grouped-multiline', li: 'tags has-addons px-2 mb-0', a: 'tag', count: 'tag is-link is-light' } }) %></div>
   </div>
 </aside>

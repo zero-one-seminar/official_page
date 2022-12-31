@@ -6,15 +6,21 @@
     <!-- stylesheets list from _config.yml -->
     <% theme.stylesheets.forEach(url => { %>
     <link rel="stylesheet" href="<%=url%>" />
-    <% }); %> <% } %>
+    <% }); %> <% } %> <% theme.scripts.forEach(url => { %>
+    <script src="<%= url %> "></script>
+    <%}) %>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
   </head>
   <body>
-    <div class="columns">
-      <%-partial('partials/nav-left') %>
-      <div class="column">
+    <div class="layout__wrapper">
+      <%-partial('partials/nav-left') %> <%-partial('partials/nav-top') %>
+      <div class="<% if (is_current('/')) { %> layout__right__home <% }else{%>layout__right<% } %> p-0">
         <main><%- body %></main>
         <%- partial('partials/footer') %>
       </div>
     </div>
   </body>
 </html>
+<script>
+  hljs.highlightAll();
+</script>

@@ -1,7 +1,7 @@
 <% const categoriesList = list_categories({ show_count: false }); const tagsList = list_tags({ show_count: false }); const archivesList = list_archives({ show_count: false }); %> <% if (is_year() ===
 false) { %>
-<div id="archive">
-  <h1>Archives</h1>
+<div class="content">
+  <h1>記事一覧</h1>
 
   <% if (theme.atom !== undefined) { %>
   <p>
@@ -12,7 +12,7 @@ false) { %>
   <% } %>
 
   <aside>
-    <h2>Categories</h2>
+    <h2>活動記録</h2>
     <% if (categoriesList !== "") { %> <%-categoriesList%> <% } else { %>
     <p>None.</p>
     <% } %>
@@ -20,31 +20,25 @@ false) { %>
   <br />
 
   <aside>
-    <h2>Tags</h2>
-    <% if (tagsList !== "") { %> <%-tagsList%> <% } else { %>
-    <p>None.</p>
-    <% } %>
+    <h2>タグ</h2>
+    <div><%- list_tags(site.tags, { class: { ul: 'field is-grouped is-grouped-multiline', li: 'tags has-addons px-2 mb-0', a: 'tag', count: 'tag is-link is-light' } }) %></div>
   </aside>
   <br />
-
-  <aside>
-    <h2>Archives</h2>
-    <% if (archivesList !== "") { %> <%-archivesList%> <% } else { %>
-    <p>None.</p>
-    <% } %>
-  </aside>
 </div>
 <% } else { %>
 
-<h1><%=page.month + '/' + page.year%></h1>
-
-<% page.posts.each(article => { %>
-<div class="archive-item">
-  <a href="<%=url_for(article.path)%>"> <%=article.title%> </a>
-  <time datetime="<%=date_xml(article.date)%>"> <%=date(article.date)%> </time>
+<div class="content">
+  <h2><%=page.year + '/' + page.month%></h2>
+  <% page.posts.each(article => { %>
+  <div class="box">
+    <p class="title is-4">
+      <a href="<%=url_for(article.path)%>"> <%=article.title%> </a>
+    </p>
+    <time datetime="<%=date_xml(article.created_at)%>"> <%=date(article.created_at)%> </time>
+    <p class="content"><%- article.excerpt %></p>
+  </div>
+  <% }); %>
 </div>
-<% }) %>
 
-<div id="paginator" class="has-text-centered"><%-paginator()%></div>
-
+<%- partial('partials/paginator') %> 
 <% } %>
