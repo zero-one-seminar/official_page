@@ -6,7 +6,7 @@
       <p class="title is-4">
         <a href="<%=url_for(article.path)%>"> <%=article.title%> </a>
       </p>
-      <time datetime="<%=date_xml(article.created_at)%>"> <%=date(article.created_at)%> </time>
+      <time datetime="<%=date_xml(article.date)%>"> <%=date(article.date)%> </time>
       <p class="content"><%- article.excerpt %></p>
     </div>
     <% }); %>
