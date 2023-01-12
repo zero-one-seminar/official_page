@@ -1,9 +1,9 @@
-name: Pretter
+name: Convert Markdown Yaml
 
 on:
   push:
     branches:
-      - original-theme
+      - main
 
 jobs:
   convert:
