@@ -1,12 +1,13 @@
 ---
 title: 最初のテーマが決まりました！
-categories: 2022-Spring-機械学習
+created_at: 2022-04-10 01:29:35
+updated_at: 2022-04-10 01:29:35
 tags: 
-- 機械学習
-- Python
-date: Sun Apr 10 2022 10:29:35 GMT+0900 (Japan Standard Time)
-updated: Sun Apr 10 2022 10:29:35 GMT+0900 (Japan Standard Time)
+    - 機械学習
+    - Python
+category: 2022-Spring-機械学習
 ---
+
 ゼミで最初に扱うテーマが決まりました．テーマは「機械学習」です！
 
 ChainerというPythonの機械学習ライブラリのチュートリアルを使って進めていきます．
