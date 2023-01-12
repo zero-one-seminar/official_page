@@ -1,6 +1,8 @@
 # html lang
 language: ja
 
+favicon: /images/avatar.png
+
 menu:
   - title: ゼロイチゼミについて
     path: /about
