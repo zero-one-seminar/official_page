@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="<%=config.language%>">
+  <head>
+    <meta charset="UTF-8" />
+    <% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
+    <!-- stylesheets list from _config.yml -->
+    <% theme.stylesheets.forEach(url => { %>
+    <link rel="stylesheet" href="<%=url%>" />
+    <% }); %> <% } %> <% theme.scripts.forEach(url => { %>
+    <script src="<%= url %> "></script>
+    <%}) %>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <% if (theme.favicon){ %>
+      <link rel="icon" href="<%- theme.favicon %>">
+    <% } %>
+  </head>
+  <body>
+    <div class="layout__wrapper">
+      <%-partial('partials/nav-left') %> <%-partial('partials/nav-top') %>
+      <div class="<% if (is_current('/')) { %> layout__right__home <% }else{%>layout__right<% } %> p-0">
+        <main><%- body %></main>
+        <%- partial('partials/footer') %>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  hljs.highlightAll();
+</script>

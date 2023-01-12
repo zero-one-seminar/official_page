@@ -1,0 +1,35 @@
+<aside id="nav__left" class="layout__left has-background-white-bis">
+  <div class="columns is-justify-content-center p-4">
+    <a href="/">
+      <img src="/images/<%= theme.images.avatar %> " alt="logo" width="200px" height="200px" />
+    </a>
+  </div>
+  <div class="columns is-justify-content-center">
+    <% if (theme.links.github) { %>
+    <span class="icon-text">
+      <span><img src="/images/<%= theme.images.icon.github %> " /></span>
+      <a href="<%= theme.links.github %> ">GitHub</a>
+    </span>
+    <% } %> <% if (theme.links.twitter) { %>
+    <span class="icon-text">
+      <span><img src="/images/<%= theme.images.icon.twitter %> " /></span>
+      <a href="<%= theme.links.twitter %>">Twitter</a>
+    </span>
+    <% } %>
+  </div>
+  <div class="p-2">
+    <div class="menu">
+      <ul class="menu-list">
+        <% for( const {title: menu_title, path: menu_path} of theme.menu ) { %>
+        <li>
+          <a href="<%- url_for(menu_path)%>"><%= menu_title %> </a>
+        </li>
+        <% } %>
+      </ul>
+      <p class="menu-label">活動記録</p>
+      <%- list_categories(site.categories, { show_count: false, class: 'menu' }) %>
+    </div>
+    <p class="menu-label">タグ</p>
+    <div><%- list_tags(site.tags, { class: { ul: 'field is-grouped is-grouped-multiline', li: 'tags has-addons px-2 mb-0', a: 'tag', count: 'tag is-link is-light' } }) %></div>
+  </div>
+</aside>

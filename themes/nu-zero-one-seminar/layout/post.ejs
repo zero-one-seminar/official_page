@@ -1,0 +1,12 @@
+<% const created_at = date(page.date, 'YYYY年M月D日'); const updated_at = date(page.updated, 'YYYY年M月D日'); %>
+<article id="post" class="content">
+  <h1 class="title"><%=page.title%></h1>
+  <div class="is-size-6 has-text-grey">
+    <span>作成日：<%= created_at %> </span>
+    <span>更新日：<%= updated_at %> </span>
+  </div>
+  <%-page.content%>
+</article>
+
+<%- partial('partials/paginator') %> 
+
