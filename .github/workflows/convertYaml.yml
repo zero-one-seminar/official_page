@@ -1,0 +1,22 @@
+name: Pretter
+
+on:
+  push:
+    branches:
+      - original-theme
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 17.x
+      - name: convert md yaml
+        run: |
+          yarn install
+          node src/convert-yaml.js
+      - uses: stefanzweifel/git-auto-commit-action@v3.0.0
+        with:
+          commit_message: convert md yaml
